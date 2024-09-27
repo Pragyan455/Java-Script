@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function validateForm()
+		{
+			var name=document.myform.name.value;
+			var pass=document.myform.password.value;
+			
+			if(name==null || name=="")
+			{
+				alert("Name cannot be empty");
+				return false; 
+			}
+			else if (pass.length<8)
+			{
+				alert("password should be atleast  8 characters");
+				return false;
+			}
+			else if (pass==null || pass=="")
+			{
+			alert("password cannot be empty");
+			return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<form name="myform" action="java24.html" onsubmit="return(validateForm());">
+		name:<input type="text" name="name"><br><br>
+		Pass-word:<input type="password" name="password"><br><br>
+		<input type="submit" name="Register"> 
+	</form>
+</body>
+</html>

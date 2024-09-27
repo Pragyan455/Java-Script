@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title></title>
+	<style>
+		div{
+		width:200px;
+		height:200px;
+		border:2px solid black ;
+	}
+
+	</style>
+	<script type="text/javascript">
+		function mouseMoveFunction(e) 
+		{
+			var x=e.clientX;
+			var y=e.clientY;
+			var coor="co-ordinate: ("+x+","+y+")";
+			document.getElementById("myP").innerHTML=coor;
+		}
+		function clearFunction(e)
+		{
+			
+			document.getElementById("myP").innerHTML="";
+		}
+	</script>
+</head>
+<body>
+	<div onmousemove="mouseMoveFunction(event)" onmouseout="clearFunction()">
+		
+	</div>
+	<p>Mouse over the rectangle above, and get the coordinates of your mouse pointer.</p>
+	<p>When the mouse is moved over the div, the p element will display the horizontal and vertical coordinates of your mouse pointer, whose values are returned from the clientX and clientY properties on the 
+	MouseEvent object.</p>
+	<p id="myP"></p>
+
+</body>
+</html>

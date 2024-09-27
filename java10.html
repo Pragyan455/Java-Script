@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+		<form name="f1"onsubmit="display(this)">
+			first name <input type="text" name="fname"><br>
+			last name<input type="text" name="lname"><br>
+			<input type="SUBMIT" name="click me">
+		</form>
+		<script>
+			function display(x)
+			{
+				name=document.f1.fname.value;
+				sur=document.f1.lname.value;
+				document.write("your fname is ",name,"<br>");
+				document.write("your lname is ",sur);
+			}
+		</script>
+</body>
+</html>
